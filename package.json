@@ -1,0 +1,19 @@
+{
+  "name": "hr-game-hackathon",
+  "version": "1.0.0",
+  "description": "Starter Repo for HR Game Hackathon",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZLester/HR-Game-Hackathon.git"
+  },
+  "author": "Zach Lester",
+  "license": "ISC",
+  "homepage": "https://github.com/ZLester/HR-Game-Hackathon#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
