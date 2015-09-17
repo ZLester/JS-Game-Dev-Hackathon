@@ -11,7 +11,7 @@ Running the Server
 ```sh
 * nodemon server.js
 ```
-Controls in the Demo are the up/left/right arrow keys
+Controls in the demo are the up/left/right arrow keys
 
 ## Tutorials to help you get started with Phaser
 * http://phaser.io/tutorials/making-your-first-phaser-game
