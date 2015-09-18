@@ -3,7 +3,7 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameContainer');
 var mainState = {
   preload: function () {
     game.stage.backgroundColor = '#666';
-    game.load.image('player', 'assets/player.png'); 
+    game.load.image('player', 'assets/hrlogo.png'); 
     game.load.image('ground', 'assets/ground.png');
   },
   create: function () {
@@ -14,7 +14,8 @@ var mainState = {
     this.player.body.gravity.y = 1000; 
     this.player.body.bounce.y = 0.5;
     this.player.body.collideWorldBounds = true;
-    
+    this.player.scale.setTo(0.4, 0.4);
+
     this.platforms = game.add.group();
     this.platforms.enableBody = true;
     
