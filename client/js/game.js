@@ -37,15 +37,15 @@ var mainState = {
     var cursors = game.input.keyboard.createCursorKeys();
     if (cursors.left.isDown)
     {
-        this.player.body.velocity.x = -150;
+        this.player.body.velocity.x = -300;
     }
     else if (cursors.right.isDown)
     {
-        this.player.body.velocity.x = 150;
+        this.player.body.velocity.x = 300;
     }
     if (cursors.up.isDown && this.player.body.touching.down)
     {
-        this.player.body.velocity.y = -600;
+        this.player.body.velocity.y = -800;
     }
   }
 };
