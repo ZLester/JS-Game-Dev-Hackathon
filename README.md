@@ -20,3 +20,7 @@ Controls in the demo are the up/left/right arrow keys
 
 ## Phaser Docs
 * http://phaser.io/docs
+
+## Alternatively...
+* Don't want to create a game from scratch? Why not take an existing open source game and make some tweaks to it! 
+* You can find a pretty large list of open source games [here](https://github.com/leereilly/games) that you can fork, tweak, and/or make contributions to.
