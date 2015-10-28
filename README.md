@@ -19,7 +19,7 @@ Controls in the demo are the up/left/right arrow keys
 * [Flappy Bird Tutorial](http://blog.lessmilk.com/how-to-make-flappy-bird-in-html5-1/)
 
 ## Phaser Docs
-* http://phaser.io/docs
+* You can find Phaser's docs [here](http://phaser.io/docs)
 
 ## Alternatively...
 * Don't want to create a game from scratch? Why not take an existing open source game and make some tweaks to it! 
