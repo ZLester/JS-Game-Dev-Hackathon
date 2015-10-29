@@ -8,7 +8,12 @@ var startMenuState = {
     game.load.image('title', '../assets/images/title.png');
   },
   create: function () {
+    game.physics.startSystem(Phaser.Physics.ARCADE);
     this.map = game.add.tilemap('mario');
+    this.map.addTilesetImage('level1Tiles', 'tiles');
+    this.layer = this.map.createLayer('Level1');
+    this.layer.resizeWorld();
+
     // game.physics.startSystem(Phaser.Physics.ARCADE);
 
     // this.player = this.game.add.sprite(100, 245, 'player');
