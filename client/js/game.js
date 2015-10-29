@@ -18,14 +18,13 @@ var mainState = {
 
     this.platforms = game.add.group();
     this.platforms.enableBody = true;
-    
     this.ground = [];
     for (var i = 0; i < game.world.width; i+=70) {
       this.ground.push(this.platforms.create(i, game.world.height - 70, 'ground'));
     }
-    for (var j = 0; j < this.ground.length; j++) {
-      this.ground[j].body.immovable = true;
-    }
+    this.platforms.forEach(function(platform) {
+      platform.body.immovable = true;
+    });
     
   },
   update: function () {
