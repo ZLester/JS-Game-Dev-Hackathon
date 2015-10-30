@@ -21,7 +21,9 @@ var mainState = {
     // this.player.body.bounce.y = 0.5;
     this.player.body.collideWorldBounds = true;
     this.player.scale.setTo(0.75, 0.75);
-
+    this.tokens = game.add.group();
+    this.tokens.enableBody = true;
+    this.tokenArr = [];
     // this.platforms = game.add.group();
     // this.platforms.enableBody = true;
     // this.ground = [];
@@ -50,10 +52,13 @@ var mainState = {
     } else if (cursors.down.isDown) {
         this.player.y += 3;
     }
+    this.generateToken();
   },
   generateToken: function() {
     var tokenLoc = this.generateRandomLoc();
-
+    var curToken = this.tokens.create(tokenLoc[0], tokenLoc[1], 'token');
+    curToken.scale.setTo(0.2,0.2)
+    this.tokenArr.push(curToken);
   },
   generateRandomLoc: function () {
     var randX = Math.floor(Math.random() *  740);
