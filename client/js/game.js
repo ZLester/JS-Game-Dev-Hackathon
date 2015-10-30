@@ -1,23 +1,26 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameContainer');
+var game = new Phaser.Game(800, 15*16, Phaser.AUTO, 'gameContainer');
 
 var startMenuState = {
   preload: function () {
-    game.stage.backgroundColor = '#787878';
+    // game.stage.backgroundColor = '#666';
     game.load.tilemap('mario', '../assets/levels/level1.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.image('tiles', '../assets/sheets/super_mario.png');
     game.load.image('title', '../assets/images/title.png');
   },
   create: function () {
+
     game.physics.startSystem(Phaser.Physics.ARCADE);
     this.map = game.add.tilemap('mario');
     this.map.addTilesetImage('level1Tiles', 'tiles');
-    this.layer = this.map.createLayer('Level1');
+    this.layer = this.map.createLayer('World1');
     this.layer.resizeWorld();
-
-    // game.physics.startSystem(Phaser.Physics.ARCADE);
+    this.layer.wrap = true;
+    this.title = game.add.sprite(40, 80, 'title');
+    this.title.scale.setTo(0.25,0.25);
+    this.cursors = game.input.keyboard.createCursorKeys();
 
     // this.player = this.game.add.sprite(100, 245, 'player');
-    // game.physics.arcade.enable(this.player);
+    game.physics.arcade.enable(this.title);
     // this.player.body.gravity.y = 1000; 
     // this.player.body.bounce.y = 0.5;
     // this.player.body.collideWorldBounds = true;
@@ -35,6 +38,26 @@ var startMenuState = {
     
   },
   update: function () {
+
+    if (this.cursors.left.isDown)
+    {
+        game.camera.x -= 8;
+    }
+    else if (this.cursors.right.isDown)
+    {
+        game.camera.x += 8;
+    }
+
+    if (this.cursors.up.isDown)
+    {
+        game.camera.y -= 8;
+    }
+    else if (this.cursors.down.isDown)
+    {
+        game.camera.y += 8;
+    }
+    // this.title.body.velocity.x = 30;
+
     // for (var i = 0; i < this.ground.length; i++) {
     //   game.physics.arcade.collide(this.player, this.ground[i]);
     // }
