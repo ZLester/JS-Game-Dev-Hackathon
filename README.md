@@ -1,5 +1,5 @@
-# HR-Game-Hackathon
-Phaser Starter Repo w/Express Server for Hack Reactor's Game Hackathon
+# JS-Game-Dev-Hackathon
+Phaser Starter Repo w/Express Server for my JS Game Dev Hackathon
 
 ## Getting Started
 
